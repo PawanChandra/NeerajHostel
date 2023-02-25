@@ -1,0 +1,12 @@
+﻿@model NeerajHostel_FrontEnd.Models.User
+
+<div class="form">
+    <form asp-action="signin">
+        <input type="text" asp-for="Name" placeholder="Full Name *" class="form-control" /><br />
+        <input type="email" asp-for="Email" placeholder="Email *" class="form-control" /><br />
+        <input type="text" asp-for="Contact" placeholder="Contact *" class="form-control" /><br />
+        <input type="password" asp-for="Password" placeholder="Password *" class="form-control" /><br />
+        <input type="password" asp-for="ConfirmPassword" placeholder="Confirm Password *" class="form-control" /><br />
+        <input type="submit" class="btn btn-primary" value="Submit" asp-action="signin" asp-controller="user"/>
+    </form>
+</div>
