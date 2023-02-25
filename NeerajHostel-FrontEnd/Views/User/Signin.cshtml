@@ -1,12 +1,46 @@
 ﻿@model NeerajHostel_FrontEnd.Models.User
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="../css/user/signin.css"/>
 
-<div class="form">
-    <form asp-action="signin">
-        <input type="text" asp-for="Name" placeholder="Full Name *" class="form-control" /><br />
-        <input type="email" asp-for="Email" placeholder="Email *" class="form-control" /><br />
-        <input type="text" asp-for="Contact" placeholder="Contact *" class="form-control" /><br />
-        <input type="password" asp-for="Password" placeholder="Password *" class="form-control" /><br />
-        <input type="password" asp-for="ConfirmPassword" placeholder="Confirm Password *" class="form-control" /><br />
-        <input type="submit" class="btn btn-primary" value="Submit" asp-action="signin" asp-controller="user"/>
-    </form>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="~/css/user/signin.css" />
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form asp-action="signin">
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <ion-icon name="mail-outline"></ion-icon><ion-icon name="star-outline" class="error"></ion-icon>
+                        <input type="email" />
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" />
+                        <label for="">Psssword</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox" />Remember Me <a href="#">Forgot Password</a></label>
+                        
+                    </div>
+                    <button type="submit">Signin</button>
+                    <div class="register">
+                        <p>Dont't have an account<a href="#"> Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+    </html>
